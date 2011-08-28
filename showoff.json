@@ -1,0 +1,8 @@
+{ "name": "LazyBoy and Mongoose", "sections": 
+  [ 
+    {"section":"intro"},
+    {"section":"mongoose"},
+    {"section":"lazyboy"},
+    {"section":"conclusion"}
+  ]
+}
