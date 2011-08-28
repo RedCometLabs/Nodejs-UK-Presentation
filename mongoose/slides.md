@@ -1,4 +1,22 @@
-!SLIDE
-# What is it?
+!SLIDE bullets incremental
+# About
+* Mongodb ORM
+* By LearnBoost team
 
-##Mongoose is a MongoDB object modeling tool designed to work in an asynchronous environment.
+!SLIDE commandline
+# Installation
+    $npm install mongoose
+    Installing...Done
+
+!SLIDE
+# Define Model
+
+@@@ javascript
+var Comment = new Schema({
+    name  :  { type: String, default: 'hahaha' }
+  , age   :  { type: Number, min: 18, index: true }
+  , bio   :  { type: String, match: /[a-z]/ }
+  , date  :  { type: Date, default: Date.now }
+  , buff  :  Buffer
+});
+
