@@ -56,35 +56,10 @@
     });
 
 !SLIDE small
-#Queries
-
-## Also supports custom views
-
-    @@@ javascript
-
-    User.addView("RealJohnRambo", {
-      map: function (doc) {
-          if (doc_model_type ==="User" 
-              && doc.name === "John" 
-              && doc.surname === "Rambo") {
-            emit(doc.id, doc);
-          }
-      }      
-    }
-
-    User.view("RealJohnRambo", function(err, rambos) {});
-
-!SLIDE small
-# Relationships
-
-@@@ javascript
-var Post = Model.define('Post',{title:String
-  , content: String
-  , date: Date
-  , url: String
-  , author: {has_one: Author}
-, comments: {has_many: Comment}
-});
+# Other features
+ * Custom views and methods
+ * Save and create hooks
+ * Model embedding
 
 
 
