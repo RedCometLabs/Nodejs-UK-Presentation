@@ -2,7 +2,7 @@
 # These are the ORM's you are looking for
 ![stormtrooper](stormtrooper.jpg)
 
-http://weareatomik.com/pictures/stormtrooper05.jpg
+http://weareatomik.com/pictures/stormtrooper05.jpg by Stéfan
 
 !SLIDE
 # About me
@@ -10,7 +10,7 @@ http://weareatomik.com/pictures/stormtrooper05.jpg
 !SLIDE center
 # What is a ORM/ODM?
 ![hiding](hiding.jpg)
-http://www.flickr.com/photos/st3f4n/3536695140/in/set-72157616350171741/
+http://www.flickr.com/photos/st3f4n/3536695140/in/set-72157616350171741/ by Stéfan
 
 !SLIDE bullets incremental
 
