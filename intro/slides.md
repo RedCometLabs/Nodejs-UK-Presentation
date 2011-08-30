@@ -25,16 +25,14 @@ http://www.flickr.com/photos/st3f4n/3536695140/in/set-72157616350171741/ by Sté
 * Model your domain and business rules
 * Handles boiler plate code for you
 
-!SLIDE 
+!SLIDE center
 # Enough with the theory
+![skate](skate.jpg)
+http://www.flickr.com/photos/st3f4n/3439284704/in/set-72157616350171741 by Stéfan
 
 !SLIDE center
 # Two nodejs ORM's
 ![mongoose](mongoose.jpg)
-
-!SLIDE center
-# Two nodejs ORM's
-![lazyboy](lazyboy.jpg)
 
 
 
