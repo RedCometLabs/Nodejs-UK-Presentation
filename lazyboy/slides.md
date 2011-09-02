@@ -1,6 +1,11 @@
+!SLIDE center
+# LazyBoy
+![couchdb](couchdb.jpg)
+
+
 !SLIDE bullets incremental
 #LazyBoy
-## Aim
+## Aim:
 * Intuitive api
 * Remove boiler plate db code
 * Support defaults and basic relationships
@@ -55,7 +60,7 @@
       // all the users with "Rambo" surname
     });
 
-!SLIDE small
+!SLIDE bullets incremental
 # Other features
  * Custom views and methods
  * Save and create hooks
