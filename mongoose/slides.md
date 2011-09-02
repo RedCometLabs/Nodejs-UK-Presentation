@@ -23,9 +23,6 @@
         , date  :  { type: Date, default: Date.now }
       });
 
-!SLIDE
-# Crud
-
 !SLIDE small
 # Simple Queries
 
@@ -61,5 +58,66 @@
         title     : String
       , comments  : [Comment]
     });
+
+!SLIDE smaller
+# Relationships
+## DBRefs
+
+    @@@ javascript
+    var PersonSchema = new Schema({
+        name    : String
+      , age     : Number
+      , stories : [{ type: Schema.ObjectId, ref: 'Story' }]
+    });
+
+    var StorySchema = new Schema({
+        _creator : { type: Schema.ObjectId, ref: 'Person' }
+      , title    : String
+      , fans     : [{ type: Schema.ObjectId, ref: 'Person' }]
+    });
+
+    var Story  = mongoose.model('Story', StorySchema);
+    var Person = mongoose.model('Person', PersonSchema); 
+
+!SLIDE small
+# Relationships
+## DBRefs
+
+    @@@ javascript 
+    Story
+    .findOne({ title: /Nintendo/i })
+    .populate('_creator') // <--
+    .run(function (err, story) {
+      if (err) ..
+      console.log('The creator is %s', story._creator.name);
+      // prints "The creator is Aaron"
+    })
+
+!SLIDE bullets incremental
+#Middleware
+* Method Hooks
+* Called before `save`, `init` and `remove`
+* Can be run in series or parallel
+
+!SLIDE 
+#Middleware
+## Series
+
+    @@@ javascript
+    schema.pre('save', function (next) {
+      // do something cool
+      next();
+    })
+
+!SLIDE small
+#Middleware
+## Parallel
+
+    @@@ javascript
+    schema.pre('save', true, function (next, done) {
+      // do something also quite cool
+      done();
+    })
+
 
 
