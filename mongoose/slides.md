@@ -12,12 +12,12 @@
 !SLIDE
 # The basics
 
-!SLIDE small
+!SLIDE smaller
 # Define Model
 
     @@@ javascript
       var Comment = new Schema({
-          name  :  { type: String, default: 'hahaha' }
+          name  :  { type: String, default: 'John Smith' }
         , age   :  { type: Number, min: 18, index: true }
         , bio   :  { type: String, match: /[a-z]/ }
         , date  :  { type: Date, default: Date.now }
@@ -35,7 +35,7 @@
     // doc is a Document
     });
 
-!SLIDE
+!SLIDE smaller
 # Complex Queries
 
     @@@ javascript
@@ -71,26 +71,22 @@
     });
 
     var StorySchema = new Schema({
-        _creator : { type: Schema.ObjectId, ref: 'Person' }
+        author : { type: Schema.ObjectId, ref: 'Person' }
       , title    : String
       , fans     : [{ type: Schema.ObjectId, ref: 'Person' }]
     });
 
-    var Story  = mongoose.model('Story', StorySchema);
-    var Person = mongoose.model('Person', PersonSchema); 
-
-!SLIDE small
+!SLIDE smaller
 # Relationships
 ## DBRefs
 
     @@@ javascript 
     Story
     .findOne({ title: /Nintendo/i })
-    .populate('_creator') // <--
+    .populate('author')
     .run(function (err, story) {
       if (err) ..
-      console.log('The creator is %s', story._creator.name);
-      // prints "The creator is Aaron"
+      console.log('The author is %s', story.author.name);
     })
 
 !SLIDE bullets incremental

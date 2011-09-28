@@ -1,7 +1,7 @@
 !SLIDE center
 # LazyBoy
+### http://garrensmith.com/LazyBoy
 ![couchdb](couchdb.jpg)
-
 
 !SLIDE bullets incremental
 #LazyBoy
@@ -12,10 +12,10 @@
 
 !SLIDE commandline incremental
 # Installation 
-    $npm install lazyboy
+    $npm install LazyBoy
     Installing...Done
 
-!SLIDE 
+!SLIDE smaller
 # Define Model
     @@@ javascript 
         var Model = require('LazyBoy');
@@ -35,7 +35,7 @@
     rambo.save(function (err, saved_user) {
       if (err) throw err;
 
-      console.log("Awesome, I got saved with id " + saved_user.id);
+      console.log("Awesome, saved with" + saved_user.id);
     });
 
     rambo.remove();
@@ -45,7 +45,7 @@
 * Couchdb uses views
 * Lazyboy creates some standard views
 
-!SLIDE small
+!SLIDE smaller
 # Queries
 
     @@@ javascript
@@ -60,11 +60,24 @@
       // all the users with "Rambo" surname
     });
 
+!SLIDE smaller
+# Relationships
+
+    @@@javascript
+    Comment = Model.define("Comment", {
+      name: String,
+      text: String
+    });
+    
+    BlogPost = Model.define("BlogPost", {
+      title: String,
+      comments: {has_many: Comment}
+    });
+
 !SLIDE bullets incremental
 # Other features
  * Custom views and methods
  * Save and create hooks
- * Model embedding
 
 
 
