@@ -25,6 +25,12 @@
         surname: {type: String, default: "Rambo"}
       });
 
+!SLIDE center
+# Crud
+![cook](cook.jpg)
+#### http://www.flickr.com/photos/st3f4n/3573062519/sizes/z/in/set-72157616350171741/ by Stéfan
+
+
 !SLIDE smaller
 # Crud
   

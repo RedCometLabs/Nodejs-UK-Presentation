@@ -9,8 +9,10 @@
     $npm install mongoose
     Installing...Done
 
-!SLIDE
+!SLIDE center
 # The basics
+![break](break.jpg)
+#### http://www.flickr.com/photos/st3f4n/3522802951/sizes/z/in/set-72157616350171741/ by Stéfan
 
 !SLIDE smaller
 # Define Model
@@ -48,6 +50,11 @@
       .limit(10)
       .asc('age')
       .run(callback);
+
+!SLIDE center
+# Relationships
+![relat](relat.jpg)
+http://www.flickr.com/photos/st3f4n/3441598441/sizes/z/in/set-72157616350171741/ by Stéfan
 
 !SLIDE 
 # Relationships
